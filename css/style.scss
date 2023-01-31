@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+//colors
+$dark-card-box: rgb(140, 0, 255);
+
+body {
+   section {
+    min-height: 100vh;
+    .container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 1rem;
+        .icons {
+            cursor: pointer;
+            .fas {
+                font-size: 1.6rem;
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                background-color: #232323;
+                color: white;
+                width: 2.3rem;
+                height: 2.3rem;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 2.3rem;
+                vertical-align: center;
+            }
+            .fa-sun {
+                opacity: 0;
+                pointer-events: none;   
+            }
+        }
+        .content-box {
+            width: 360px;
+            height: 480px;
+            overflow: hidden;
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.4);
+            background-color: white;
+            .user-picture {
+                img {
+                    width: 100%;
+                }
+            }
+            .user-profile {
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                color: rgb(23, 20, 42);
+                .fa-brands {
+                    color: rgb(23, 20, 42);
+                    font-size: 1.6rem;
+                }
+                .fa-user {
+                    font-size: 1.6rem;
+                    margin-top: -.5rem;
+                    padding: .5rem 0;
+                }
+                .user-name {
+                    font-size: 1.2rem;
+                    margin-bottom: .5rem;
+                }
+                .user-information {
+                    text-align: justify;
+                    letter-spacing: .021rem;
+                    line-height: 1.4rem;
+                    margin-bottom: 1.5rem;
+                }
+                .user-socials {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+   }
+   .dark-mode{
+    background-color: #232323;
+    .container {
+        .icons {
+            background-color: white;
+            .fa-sun {
+                opacity: 1;
+                pointer-events: auto;
+                background-color: white;
+                color: #232323;
+            }
+            .fa-moon {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        .content-box {
+            box-shadow: 0px 8px 34px $dark-card-box;
+        }
+    }
+   }
+}
